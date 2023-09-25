@@ -35,3 +35,8 @@ const themes = [
   'Inspiration',
   'Wisdom',
 ];
+
+const generateRandom (arr) => {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
