@@ -46,5 +46,14 @@ const generateRandomMessage = (phrasesArr, authorsArr, themesArr) => {
    ${generateRandom(themesArr)}`;
 };
 
-const randomMessage = generateRandomMessage(phrases, authors, themes);
+const displayRandomMessage = () => {
+  const randomMessage = generateRandomMessage(phrases, authors, themes);
+  document.getElementById('message').textContent = randomMessage;
+};
+const generateButton = document.getElementById('generateButton');
+generateButton.addEventListener('click', displayRandomMessage);
+
+// Display a random message when the page is loaded
+window.addEventListener('load', displayRandomMessage);
+
 console.log(randomMessage);
