@@ -36,7 +36,15 @@ const themes = [
   'Wisdom',
 ];
 
-const generateRandom (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)];
-}
+const generateRandom = (arr) => {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
 
+const generateRandomMessage = (phrasesArr, authorsArr, themesArr) => {
+  return `${generateRandom(phrasesArr)} 
+   -${generateRandom(authorsArr)} 
+   ${generateRandom(themesArr)}`;
+};
+
+const randomMessage = generateRandomMessage(phrases, authors, themes);
+console.log(randomMessage);
